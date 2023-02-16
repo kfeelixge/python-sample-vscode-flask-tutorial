@@ -34,3 +34,12 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+- task: aquasecScanner@4
+  inputs:
+    image: '*'
+    scanType: 'hosted'
+    register: false
+    hideBase: false
+    showNegligible: false
+    windowsScannerVersion: '6.5.0'
+    connection: 'Aqua SaaS'
