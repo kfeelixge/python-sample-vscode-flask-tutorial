@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: DevSecOps
+  name: DevSecOps
 strategy:
   matrix:
     Python37:
