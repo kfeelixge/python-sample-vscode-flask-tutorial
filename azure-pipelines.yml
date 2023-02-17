@@ -1,5 +1,9 @@
 # Docker v2
 # Build or push Docker images, login or logout, start or stop containers, or run a Docker command.
+
+pool:
+  name: DevSecOps
+steps:
 - task: aquasecScanner@4
   inputs:
     image: 'alpine:latest'
