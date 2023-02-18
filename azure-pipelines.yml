@@ -4,16 +4,9 @@
 pool:
   name: DevSecOps
 steps:
-- task: aquasecScanner@4
+- task: Docker@2
   inputs:
-    image: 'alpine:latest'
-    registry: 'https://docker.io'
-    scanType: 'local'
-    register: false
-    hideBase: false
-    showNegligible: false
-    windowsScannerVersion: '6.5.0'
-    connection: 'Aqua SaaS'
-    caCertificates: true
-    scanner: 'registry.aquasec.com/scanner:2022.4'
-
+    containerRegistry: 'Docker Hub'
+    repository: 'alpine:latest'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
