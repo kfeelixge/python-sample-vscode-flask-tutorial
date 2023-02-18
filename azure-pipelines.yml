@@ -7,7 +7,6 @@ steps:
 - task: aquasecScanner@4
   inputs:
     image: 'alpine:latest'
-    user: 'kusal@armaturesystems.com'
     scanType: 'local'
     register: false
     hideBase: false
