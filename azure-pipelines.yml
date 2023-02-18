@@ -10,3 +10,9 @@ steps:
     repository: 'kfeelixge/alpine'
     command: 'build'
     Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Hub'
+    repository: 'kfeelixge/alpine'
+    command: 'push'
+
