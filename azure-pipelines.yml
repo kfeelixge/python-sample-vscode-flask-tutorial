@@ -7,6 +7,7 @@ steps:
 - task: aquasecScanner@4
   inputs:
     image: 'alpine:latest'
+    registry: 'https://docker.io'
     scanType: 'local'
     register: false
     hideBase: false
@@ -15,4 +16,4 @@ steps:
     connection: 'Aqua SaaS'
     caCertificates: true
     scanner: 'registry.aquasec.com/scanner:2022.4'
-    runOptions: '-e AQUA_TOKEN=f2649adb8a56541615910187646475f2f65749ee'
+
