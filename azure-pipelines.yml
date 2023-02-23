@@ -19,9 +19,10 @@ steps:
     windowsScannerVersion: '6.5.0'
     connection: 'Aqua SaaS'
     caCertificates: true
+    scanner: 'registry.aquasec.com/scanner:2301.4.11'
+    runOptions: '-e AQUA_TOKEN=f2649adb8a56541615910187646475f2f65749ee'
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker Hub'
     repository: 'kfeelixge/alpine'
     command: 'push'
-
