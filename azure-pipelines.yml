@@ -19,7 +19,7 @@ steps:
     windowsScannerVersion: '6.5.0'
     connection: 'Aqua SaaS'
     caCertificates: true
-    image: 'kfeelixge/alpine'
+    image: 'kfeelixge/alpine:$(Build.BuildId)'
     scanner: 'registry.aquasec.com/scanner:2301.4.11'
     runOptions: '-e AQUA_TOKEN=5f45f6da-bd19-4e9a-83d9-96d9376c48fa'
 - task: Docker@2
