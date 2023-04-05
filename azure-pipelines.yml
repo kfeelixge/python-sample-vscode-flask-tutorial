@@ -20,7 +20,7 @@ steps:
     connection: 'Aqua SaaS'
     caCertificates: true
     image: 'kfeelixge/alpine:$(Build.BuildId)'
-    scanner: 'registry.aquasec.com/scanner:2301.4.11'
+    scanner: 'registry.aquasec.com/scanner:2303.7.5'
     runOptions: '-e AQUA_TOKEN=5f45f6da-bd19-4e9a-83d9-96d9376c48fa'
 - task: Docker@2
   inputs:
