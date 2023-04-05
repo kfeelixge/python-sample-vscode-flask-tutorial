@@ -12,7 +12,7 @@ steps:
     Dockerfile: '**/Dockerfile'
 - task: aquasecScanner@4
   inputs:
-    scanType: 'local'
+    scanType: 'hosted'
     register: false
     hideBase: false
     showNegligible: false
