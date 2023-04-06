@@ -22,10 +22,13 @@ steps:
     image: 'kfeelixge/alpine:$(Build.BuildId)'
     scanner: 'registry.aquasec.com/scanner:2303.7.5'
     runOptions: '-e AQUA_TOKEN=18887b24-1999-47d6-b599-317902432f65'
+    customFlags: '--direct-cc'
+    scanMalware: true
+    showWillNotFix: true
+    policies: 'azure_devops_custom'
+
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker Hub'
     repository: 'kfeelixge/alpine'
     command: 'push'
-
-
