@@ -25,7 +25,7 @@ steps:
     customFlags: '--direct-cc'
     scanMalware: true
     showWillNotFix: true
-    policies: 'azure_devops_custom'
+    policies: 'azure_devops_custom azure_devops_custom2'
 
 - task: Docker@2
   inputs:
